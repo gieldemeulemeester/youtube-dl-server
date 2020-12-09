@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<meta id="url-data" data-url-cancel="{{ url_for('cancel_job') }}" data-url-get-status="{{ url_for('get_job_status') }}">
+<script src="{{ url_for('static', filename='jobs.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div>
+  <h1 class="display-4">youtube-dl jobs</h1>
+  <a class="text-info" href="{{ url_for('list_jobs') }}">Refresh</a> | <a class="text-info" href="{{ url_for('clear_jobs') }}">Clear</a>
+</div>
+<table class="table table-mine" id="table-jobs">
+  <tbody>
+    {% for job in jobs %}
+    <tr>
+      <th scope="row">{{ job.id }}</th>
+      <td>{{ job.url }}</td>
+      <td>{{ job.get_status() }}</td>
+      <td></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

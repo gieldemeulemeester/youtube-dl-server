@@ -1,0 +1,33 @@
+body {
+    background-color: #002b36;
+}
+
+.container {
+    height: 100vh;
+}
+
+div.input-group>select.custom-select {
+    flex: 0.1 1 100px;
+}
+
+div.input-group, .table-mine {
+    margin: 48px 24px;
+}
+
+div.input-group > input.form-control {
+    text-align: center;
+}
+
+div.input-group-prepend > span.input-group-text {
+    min-width: 56px;
+}
+
+.table-mine, .table-mine td, .table-mine th {
+    color: #fff;
+    background-color: #002b36;
+    border-top: 0px !important;
+}
+
+.bg-dark-mine {
+    background-color:  #00161d !important;
+}
