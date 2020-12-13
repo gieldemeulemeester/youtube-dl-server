@@ -2,7 +2,7 @@
 
 # youtube-dl-server
 
-[`Flask`](https://github.com/pallets/flask) application for [`youtube-dl`](https://github.com/rg3/youtube-dl) to downloading youtube videos. The docker image is based on [`python:alpine`](https://registry.hub.docker.com/_/python/).
+[`Flask`](https://github.com/pallets/flask) application for [`youtube-dl`](https://github.com/rg3/youtube-dl) to download youtube videos. The docker image is based on [`python:alpine`](https://registry.hub.docker.com/_/python/).
 
 ![screenshot][1]
 
@@ -32,7 +32,7 @@ youtube-dl:
   restart: unless-stopped
 ```
 
-Optionally you could make the download directory accessible with samba as shown in the example below.
+Optionally, you could make the download directory accessible with samba as shown in the example below.
 
 ```yml
 samba:
